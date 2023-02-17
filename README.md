@@ -12,7 +12,7 @@ This application helps people answer the age-old question: what's for dinner? Us
  6. Next go to the directory that it is inside of and open the “index.html” in your browser, from there you should be able to use the application as intended.
 
 ### Preview of App:
-![preview](feature%20gif/8ABB9674-1A9A-4B4B-AB75-829AE2F934BF_1_102_o.jpeg)
+![preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2JlMDQ2NGQ0YzNiOTQ3ZDJhOWM5YjEwMGY5ZDk3YTRiZDk2Y2EzOSZjdD1n/9w1zAvESx2nkSMRLVM/giphy.gif)
 
 ### Context:
 This is a project from Turing School's Mod One Front End program, this was completed halfway into Mod One. This project took me somewhere around 10-12 hours of work time.
