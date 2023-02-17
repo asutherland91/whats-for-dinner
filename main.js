@@ -1,7 +1,10 @@
 var addRecipeButton = document.querySelector(".add-recipe");
 var letsCookButton = document.querySelector(".submit");
 var clearButton = document.querySelector(".clear");
-var radioButtons = document.querySelector("input[name=meal-type]:checked");
+var radioSide = document.querySelector("#side");
+var radioMain = document.querySelector("#main-dish");
+var radioDessert = document.querySelector("#dessert");
+var radioEntireMeal = document.querySelector("#entire-meal");
 var dishHeader = document.querySelector(".dish-header");
 var nameOfDish = document.querySelector(".name-of-dish");
 var cookpot = document.querySelector(".cookpot");
@@ -56,14 +59,17 @@ var desserts = [
 ]
 
 letsCookButton.addEventListener("click", displayRandomRecipe);
-clearButton.addEventListener("click", clearMeal);
+clearButton.addEventListener("click", enableButton );
+radioSide.addEventListener("click", enableButton );
+radioMain.addEventListener("click", enableButton);
+radioDessert.addEventListener("click", enableButton);
+radioEntireMeal.addEventListener("click", enableButton);
+
 
 function getRandomRecipe(array) {
   var index = Math.floor(Math.random() * array.length);
   return array[index];
 }
-
-
 
 function displayRandomRecipe(event) {
   event.preventDefault();
@@ -77,11 +83,13 @@ function displayRandomRecipe(event) {
   else if(recipeType === "dessert") {
     var randomRecipe = getRandomRecipe(desserts);
   }
-  // else if(recipeType === "entire-meal") {
-  //   getRandomRecipe(sides);
-  //   getRandomRecipe(mains);
-  //   getRandomRecipe(desserts);
-  // }
+  else if(recipeType === "entire-meal") {
+    nameOfDish.classList.add("full-meal-text")
+    var fullSide = getRandomRecipe(sides);
+    var fullMain = getRandomRecipe(mains);
+    var fullDessert = getRandomRecipe(desserts);
+    var randomRecipe = `${fullMain} with a side of ${fullSide} and ${fullDessert} for dessert`;
+  }
   
   nameOfDish.innerText = `${randomRecipe}!`;
   cookpot.classList.add("hidden");
@@ -91,4 +99,8 @@ function displayRandomRecipe(event) {
 function clearMeal() {
   cookpot.classList.remove("hidden");
   mealDisplay.classList.add("hidden");
+}
+
+function enableButton() {
+  letsCookButton.removeAttribute("disabled");
 }
