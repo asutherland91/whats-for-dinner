@@ -1,4 +1,3 @@
-var addRecipeButton = document.querySelector(".add-recipe");
 var letsCookButton = document.querySelector(".submit");
 var clearButton = document.querySelector(".clear");
 var radioSide = document.querySelector("#side");
@@ -19,13 +18,13 @@ var sides = [
   "Coconut Rice",
   "Caeser Salad",
   "Shrimp Summer Rolls",
-  "Garlic Butter Mushrooms",
+  "Garlicky Mashed Potatoes",
   "Hush Puppies"
 ];
 var mains = [
   "Spaghetti and Meatballs",
   "Pineapple Chicken",
-  "Shakshuka",
+  "Lasagna",
   "Thai Yellow Curry",
   "Bibimbap",
   "Chicken Parmesean",
@@ -59,8 +58,8 @@ var desserts = [
 ]
 
 letsCookButton.addEventListener("click", displayRandomRecipe);
-clearButton.addEventListener("click", enableButton );
-radioSide.addEventListener("click", enableButton );
+clearButton.addEventListener("click", clearMeal);
+radioSide.addEventListener("click", enableButton);
 radioMain.addEventListener("click", enableButton);
 radioDessert.addEventListener("click", enableButton);
 radioEntireMeal.addEventListener("click", enableButton);
@@ -94,11 +93,13 @@ function displayRandomRecipe(event) {
   nameOfDish.innerText = `${randomRecipe}!`;
   cookpot.classList.add("hidden");
   mealDisplay.classList.remove("hidden");
+  clearButton.classList.remove("hidden");
 }
 
 function clearMeal() {
   cookpot.classList.remove("hidden");
   mealDisplay.classList.add("hidden");
+  clearButton.classList.add("hidden");
 }
 
 function enableButton() {
