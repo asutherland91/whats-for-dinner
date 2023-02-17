@@ -39,12 +39,6 @@ button {
   margin: 8px;
 }
 
-.add-recipe{
- padding: 10px;
- padding-left: 16px;
- padding-right:16px;
-}
-
 h1 {
   font-size: 42px;
   margin-bottom: 16px;
@@ -109,6 +103,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .dish-header {
@@ -117,7 +112,7 @@ h3 {
 
 .meal-text{
   text-align: center;
-
+  
 }
 
 .clear {
@@ -126,9 +121,9 @@ h3 {
   padding-left: 18px;
   padding-right:18px;
   background-color: #95a5a6;
-  position: relative;
-  top: 175px;
-  left: 245px
+  position: absolute;
+  top: 465px;
+  left: 535px
 }
 
 .hidden {
