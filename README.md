@@ -4,12 +4,20 @@
 This application helps people answer the age-old question: what's for dinner? Using this app you can select either side dish, main dish, dessert, or full meal and the app will generate random ideas for you. If you don't like any of them you can just randomize again and get a whole new set. If you want to clear the page you can just hit the clear button and the page will reset the page to how it was when it was first loaded.
 
 ### Installation Instructions:
- 1. Open the github repository “whats-for-dinner”.
- 2. Fork the repository.
- 3. On the forked repository page click on the green “<>Code” button and copy the SSH key.
- 4. In your own terminal go to the directory in which you wish to clone this repository to.
- 5. Once there type “git clone” and paste in the SSH key.
- 6. Next go to the directory that it is inside of and open the “index.html” in your browser, from there you should be able to use the application as intended.
+ ### To Clone the Repository:
+1. Open the GitHub repository page.
+1. Fork the repository.
+1. On the forked repository page, click the "<> Code" drop-down menu and toggle "SSH".
+1. Copy the generated link.
+1. Open the terminal and navigate to the directory you want the local version of your repository to be stored in - cloning will create a new directory.
+1. Run the command "git clone SSHKey", where SSHKey is the link copied from the GitHub page.
+
+### To View the Project - Option 1: Via the HTML File
+- Enter the created directory.
+- Run the command "open index.html" in the terminal. The webpage will appear.
+
+### To View the Project - Option 2: Via the GitHub Pages Deployment
+- Visit the [GitHub Pages deployment link.](https://asutherland91.github.io/whats-for-dinner/)
 
 ### Preview of App:
 ![preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2JlMDQ2NGQ0YzNiOTQ3ZDJhOWM5YjEwMGY5ZDk3YTRiZDk2Y2EzOSZjdD1n/9w1zAvESx2nkSMRLVM/giphy.gif)
